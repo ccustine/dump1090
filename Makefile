@@ -28,6 +28,13 @@ ifeq ($(RTLSDR), yes)
   endif
 endif
 
+UNAME := $(shell uname -s)
+ifeq ($(UNAME), Darwin)
+    CFLAGS += -DMISSING_GETTIME -DMISSING_NANOSLEEP
+    COMPAT += compat/clock_gettime/clock_gettime.o compat/clock_nanosleep/clock_nanosleep.o
+    LIBS = -lpthread -lm
+endif
+
 ifeq ($(BLADERF), yes)
   SDR_OBJ += sdr_bladerf.o
   CPPFLAGS += -DENABLE_BLADERF

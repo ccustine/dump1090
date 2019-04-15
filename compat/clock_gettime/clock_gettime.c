@@ -69,6 +69,7 @@
 #include <sched.h>                  // for sched_yield
 #include <errno.h>                  // for EINVAL, errno
 #include <unistd.h>                 // for getpid
+#include <time.h>
 
 int clock_gettime(clockid_t clk_id, struct timespec *tp)
 {

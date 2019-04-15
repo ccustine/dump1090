@@ -50,6 +50,7 @@
 
 #include "dump1090.h"
 #include "sdr_ifile.h"
+#include "compat/compat.h"
 
 static struct {
     const char *filename;

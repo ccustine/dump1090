@@ -5,6 +5,7 @@
 #define CLOCKID_T
 #endif
 
+/*
 #ifndef CLOCKID_T
 #define CLOCKID_T
 typedef enum
@@ -15,6 +16,7 @@ typedef enum
     CLOCK_THREAD_CPUTIME_ID
 } clockid_t;
 #endif // ifndef CLOCKID_T
+*/
 
 
 #ifndef TIMER_ABSTIME
